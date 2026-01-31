@@ -1,8 +1,19 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+
+// 페이지 이동 시 스크롤을 맨 위로 이동
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 // 페이지들 불러오기
 import Home from "./pages/Home";
@@ -14,6 +25,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="App">
         {/* 네비게이션 (모든 페이지 상단 고정) */}
         <Navbar />

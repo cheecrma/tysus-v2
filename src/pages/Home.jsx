@@ -1,7 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Factory, ShieldCheck, Truck, ChevronDown, Phone } from "lucide-react";
+import {
+  Factory,
+  ShieldCheck,
+  Truck,
+  ChevronDown,
+  Phone,
+  Search,
+} from "lucide-react";
+import LazyImage from "../components/LazyImage";
 
 // 제품 이미지 import
 import coilImg from "../assets/스테인리스 코일.png";
@@ -13,24 +21,26 @@ function Home() {
     {
       icon: Factory,
       title: "전문 생산 설비",
-      description: "최신 설비와 숙련된 기술력으로 고품질 스테인리스 제품을 생산합니다."
+      description:
+        "최적화된 생산 설비와 숙련된 기술력으로 고품질 스테인리스 제품을 생산합니다.",
     },
     {
       icon: ShieldCheck,
       title: "품질 보증",
-      description: "철저한 품질 관리 시스템으로 신뢰할 수 있는 제품만을 공급합니다."
+      description:
+        "철저한 품질 관리 시스템으로 신뢰할 수 있는 제품만을 공급합니다.",
     },
     {
       icon: Truck,
       title: "신속한 배송",
-      description: "전국 어디든 빠르고 안전하게 배송해 드립니다."
-    }
+      description: "전국 어디든 빠르고 안전하게 배송해 드립니다.",
+    },
   ];
 
   const products = [
     { name: "스테인리스 코일", image: coilImg },
     { name: "스테인리스 판재", image: plateImg },
-    { name: "배관용 파이프", image: pipeImg }
+    { name: "배관용 파이프", image: pipeImg },
   ];
 
   return (
@@ -64,6 +74,7 @@ function Home() {
           transition={{ duration: 0.7, delay: 0.4 }}
         >
           <Link to="/products" className="btn-primary">
+            <Search size={18} />
             제품 보기
           </Link>
           <Link to="/contact" className="btn-secondary">
@@ -109,7 +120,7 @@ function Home() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="product-image">
-                <img src={product.image} alt={product.name} />
+                <LazyImage src={product.image} alt={product.name} />
               </div>
               <div className="product-content">
                 <h3>{product.name}</h3>
@@ -132,7 +143,10 @@ function Home() {
       </section>
 
       {/* 특징 섹션 */}
-      <section className="features" style={{ background: "#f8fafc", padding: "5rem 2rem" }}>
+      <section
+        className="features"
+        style={{ background: "#f8fafc", padding: "5rem 2rem" }}
+      >
         <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
           <motion.div
             className="section-header"

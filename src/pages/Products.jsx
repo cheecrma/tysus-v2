@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Phone } from "lucide-react";
+import LazyImage from "../components/LazyImage";
 
 // 제품 이미지 import
 import coilImg from "../assets/스테인리스 코일.png";
@@ -104,7 +105,7 @@ function Products() {
             <Link to={`/products/${product.id}`} style={{ textDecoration: "none" }}>
               <div className="product-card">
                 <div className="product-image">
-                  <img src={product.image} alt={product.name} />
+                  <LazyImage src={product.image} alt={product.name} />
                 </div>
                 <div className="product-content">
                   <span className="product-tag">{product.category}</span>

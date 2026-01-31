@@ -1,0 +1,7 @@
+# robots.txt for https://tysus.netlify.app
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tysus.netlify.app/sitemap.xml

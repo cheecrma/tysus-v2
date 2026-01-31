@@ -7,27 +7,27 @@ function Contact() {
     {
       icon: Phone,
       title: "전화",
-      value: "031-123-4567",
-      description: "평일 09:00 - 18:00"
+      value: "02-893-5734",
+      description: "평일 09:00 - 18:00",
     },
     {
       icon: Printer,
       title: "팩스",
-      value: "031-123-4568",
-      description: "24시간 접수"
+      value: "02-893-5742",
+      description: "24시간 접수",
     },
     {
       icon: Mail,
       title: "이메일",
-      value: "sales@tysus.co.kr",
-      description: "영업 문의"
+      value: "@",
+      description: "영업 문의",
     },
     {
       icon: Clock,
       title: "업무시간",
       value: "09:00 ~ 18:00",
-      description: "토/일/공휴일 휴무"
-    }
+      description: "토/일/공휴일 휴무",
+    },
   ];
 
   return (
@@ -56,7 +56,14 @@ function Contact() {
             </div>
             <h3>{item.title}</h3>
             <p>{item.value}</p>
-            <span style={{ fontSize: "0.85rem", color: "#64748b", marginTop: "0.25rem", display: "block" }}>
+            <span
+              style={{
+                fontSize: "0.85rem",
+                color: "#64748b",
+                marginTop: "0.25rem",
+                display: "block",
+              }}
+            >
               {item.description}
             </span>
           </motion.div>
@@ -71,7 +78,7 @@ function Contact() {
           padding: "2rem",
           display: "flex",
           alignItems: "flex-start",
-          gap: "1.5rem"
+          gap: "1.5rem",
         }}
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -87,20 +94,28 @@ function Contact() {
             alignItems: "center",
             justifyContent: "center",
             flexShrink: 0,
-            border: "1px solid #e5e7eb"
+            border: "1px solid #e5e7eb",
           }}
         >
           <MapPin size={22} color="#2c4a7c" />
         </div>
         <div>
-          <h3 style={{ fontSize: "1.15rem", marginBottom: "0.5rem", color: "#1a2a4a", fontWeight: 700 }}>
+          <h3
+            style={{
+              fontSize: "1.15rem",
+              marginBottom: "0.5rem",
+              color: "#1a2a4a",
+              fontWeight: 700,
+            }}
+          >
             본사 및 공장
           </h3>
           <p style={{ color: "#475569", lineHeight: "1.7" }}>
-            경기도 시흥시 공단대로 1234 (정왕동, 시화공단)
+            서울특별시 금천구 시흥대로 46, 12동 1층 106호(시흥동,
+            중앙철재종합상가)
             <br />
             <span style={{ color: "#64748b", fontSize: "0.9rem" }}>
-              지하철 4호선 정왕역 하차 후 택시 10분
+              지하철 1호선 석수역 1번 출구 하차 후 도보 5분
             </span>
           </p>
         </div>
@@ -114,10 +129,7 @@ function Contact() {
       >
         <h3>빠른 상담이 필요하신가요?</h3>
         <p>전화 주시면 친절하게 상담해 드리겠습니다.</p>
-        <a
-          href="tel:031-123-4567"
-          className="btn-navy"
-        >
+        <a href="tel:02-893-5734" className="btn-navy">
           <Phone size={18} />
           전화 상담하기
         </a>

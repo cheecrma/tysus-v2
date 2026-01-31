@@ -16,29 +16,42 @@ function Footer() {
         <div className="footer-links">
           <h5>바로가기</h5>
           <ul>
-            <li><Link to="/company">회사소개</Link></li>
-            <li><Link to="/products">제품소개</Link></li>
-            <li><Link to="/contact">문의처</Link></li>
+            <li>
+              <Link to="/company">회사소개</Link>
+            </li>
+            <li>
+              <Link to="/products">제품소개</Link>
+            </li>
+            <li>
+              <Link to="/contact">문의처</Link>
+            </li>
           </ul>
         </div>
         <div className="footer-links">
           <h5>연락처</h5>
           <ul>
-            <li><a href="tel:031-123-4567">TEL: 031-123-4567</a></li>
-            <li><a href="mailto:info@tysus.co.kr">info@tysus.co.kr</a></li>
-            <li><span style={{ color: "rgba(255,255,255,0.7)" }}>FAX: 031-123-4568</span></li>
+            <li>
+              <a href="tel:02-893-5734">TEL: 02-893-5734</a>
+            </li>
+            <li>
+              <a href="mailto:info@tysus.co.kr">@</a>
+            </li>
+            <li>
+              <span style={{ color: "rgba(255,255,255,0.7)" }}>
+                FAX: 02-893-5742
+              </span>
+            </li>
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
         <p>
-          대표자: 홍길동 | 사업자등록번호: 123-45-67890
+          대표자: 김형길 | 사업자등록번호: 119-19-16166
           <br />
-          주소: 경기도 시흥시 공단대로 1234 (정왕동)
+          주소: 서울특별시 금천구 시흥대로 46, 12동 1층 106호(시흥동,
+          중앙철재종합상가)
         </p>
-        <p>
-          © 2026 Taeyoung Stainless Co., Ltd. All rights reserved.
-        </p>
+        <p>© 2026 Taeyoung Stainless Co., Ltd. All rights reserved.</p>
       </div>
     </footer>
   );
