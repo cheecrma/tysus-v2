@@ -38,9 +38,9 @@ function Home() {
   ];
 
   const products = [
-    { name: "스테인리스 코일", image: coilImg },
-    { name: "스테인리스 판재", image: plateImg },
-    { name: "배관용 파이프", image: pipeImg },
+    { id: "stainless-coil", name: "스테인리스 코일", image: coilImg },
+    { id: "stainless-plate", name: "스테인리스 판재", image: plateImg },
+    { id: "piping-pipe", name: "배관용 파이프", image: pipeImg },
   ];
 
   return (
@@ -111,21 +111,26 @@ function Home() {
 
         <div className="product-grid">
           {products.map((product, index) => (
-            <motion.div
-              key={index}
-              className="product-card"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+            <Link
+              key={product.id}
+              to={`/products/${product.id}`}
+              style={{ textDecoration: "none" }}
             >
-              <div className="product-image">
-                <LazyImage src={product.image} alt={product.name} />
-              </div>
-              <div className="product-content">
-                <h3>{product.name}</h3>
-              </div>
-            </motion.div>
+              <motion.div
+                className="product-card"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                <div className="product-image">
+                  <LazyImage src={product.image} alt={product.name} />
+                </div>
+                <div className="product-content">
+                  <h3>{product.name}</h3>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
 
