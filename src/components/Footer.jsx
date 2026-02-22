@@ -34,7 +34,7 @@ function Footer() {
               <a href="tel:02-893-5734">TEL: 02-893-5734</a>
             </li>
             <li>
-              <a href="mailto:info@tysus.co.kr">@</a>
+              <a href="mailto:tysts8985@naver.com">tysts8985@naver.com</a>
             </li>
             <li>
               <span style={{ color: "rgba(255,255,255,0.7)" }}>

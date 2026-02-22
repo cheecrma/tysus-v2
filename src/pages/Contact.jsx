@@ -19,7 +19,7 @@ function Contact() {
     {
       icon: Mail,
       title: "이메일",
-      value: "@",
+      value: "tysts8985@naver.com",
       description: "영업 문의",
     },
     {
