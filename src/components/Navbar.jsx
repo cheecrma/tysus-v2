@@ -20,7 +20,7 @@ function Navbar() {
     <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
       <div className="logo">
         <Link to="/" style={{ textDecoration: "none", color: "#1a2a4a", display: "flex", alignItems: "center", gap: "0.75rem" }}>
-          TYSUS <span>태영스텐레스</span>
+          TYSTS <span>태영스텐레스</span>
         </Link>
       </div>
       <div className="menu">
